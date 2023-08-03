@@ -48,7 +48,7 @@ export async function getHistoryByDate(from, to, city) {
   const sensors = await City.find({ city: city });
 
   const rows = await Data.find({
-    sensor_id: sensors.map((item) => item.sensor_id),
+    // sensor_id: sensors.map((item) => item.sensor_id),
     timestamp: {
       $gt: from,
       $lt: to,

@@ -105,7 +105,7 @@ export default {
   async csv(req, res) {
     const start = Number(req.params.start);
     const end = Number(req.params.end);
-    const city = req.params.city;
+    // const city = req.params.city;
 
     if (end - start > 6 * 31 * 24 * 60 * 60) {
       return res.send({
@@ -114,7 +114,7 @@ export default {
     }
 
     try {
-      const rows = await getHistoryByDate(start, end, city);
+      // const rows = await getHistoryByDate(start, end, city);
       const result = [];
       const headers = {
         timestamp: "timestamp",
